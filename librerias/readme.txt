@@ -1,1 +1,0 @@
-Acá vienen las librerías de bootstrap y jquery

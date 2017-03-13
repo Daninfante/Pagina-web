@@ -2,10 +2,10 @@
 
 	$db_host="";
 	$db_usuario="";
-	$db_contraseÃ±a="";
+	$db_contraseña="";
 	$db_nombre="";
 
-	$conexion=mysqli_connect($db_host,$db_usuario,$db_contraseÃ±a,$db_nombre);
+	$conexion=mysqli_connect($db_host,$db_usuario,$db_contraseña,$db_nombre);
 	if (mysqli_connect_errno()) 
 	{
 		echo "ERROR AL CONECTAR CON LA BASE DE DATOS, POR FAVOR VUELVE A INTENTAR MAS TARDE O CONTACTESE CON EL ADMINISTRADOR";

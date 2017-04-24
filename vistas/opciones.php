@@ -88,10 +88,10 @@
 <?php
 	
 	session_start();
-	if (!isset($_SESSION['cliente1']))
+	if (!isset($_SESSION['cliente']))
 	{
 		echo "<script> alert('NO HAS ELEGIDO UNA MESA.') </script>";
-		echo " <a href='index.html' class='ref' title='Ingresa para publicar tu servicio' style='margin: 0 auto; color: red; font-family: algerian, cursive; font-size: large;''> VOLVER</a> ";
+		echo " <a href='../vistas/cuerpo.html' class='ref' title='Ingresa para publicar tu servicio' style='margin: 0 auto; color: red; font-family: algerian, cursive; font-size: large;''> VOLVER</a> ";
 		die();
 	}
 ?>
@@ -100,7 +100,9 @@
 
 <div>
 <br>
-<input onclick="location='/contades/cerrar.php'" id='usr' value="<?php echo $_SESSION['cliente1'] ?>" class='w3-btn w3-ripple'>
+<form action="../backend/ingreso.php" method="post">
+<input type="submit" name="cerrar" id='usr' value="<?php echo $_SESSION['cliente'] ?>" class='w3-btn w3-ripple'>
+</form>
 <br><br>
 
 <button class="w3-btn w3-white w3-border w3-small w3-ripple w3-border-blue w3-round-xlarge">ENTRADAS</button>

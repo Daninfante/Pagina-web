@@ -7,12 +7,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- <link rel="stylesheet" href="Estilo.css"/> -->
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
 </head>
-
+ 
+ <!-- 
+ <script type="text/javascript">
+ $(document).ready(function(){
+		$("#myModal").modal('show');
+		});
+ </script>
+  -->
 <style>
-
 	table
 	{
 		margin: 0 auto;
@@ -32,24 +40,24 @@
 
 <body>
 
- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+ <button type="button" class="btn btn-info btn-small" data-toggle="modal" data-target="#myModal">Eliegir Mesa</button>  
 
 
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-	<div class="modal-content">
-	<div class="modal-header">
-	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	<h4 class="modal-title" id="myModalLabel" align="center">Por favor indicar en qué mesa se encuentra</h4>
-	</div>
-	<div class="modal-body">
-	<div class="col-md-13">
-	<div class="box box-danger">
-	<div class="box-body">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h4 class="modal-title" id="myModalLabel" align="center">Elige la Mesa</h4>
+		  </div>
+			<div class="modal-body">
+			 <div class="col-md-13">
+			  <div class="box box-info">
+				<div class="box-body">	
 	<hr>
 
-	  <form action="mesas.php" method="post">
+	  <form action="../backend/ingreso.php" method="post">
 	  <table>
 	  	<tr>
 	  	<td>Mesa 1 <input class="radi" type="radio" name="mesa" value="mesa1"></td>
@@ -63,16 +71,14 @@
 	    <td>Mesa 7 <input class="radi" type="radio" name="mesa" value="mesa7"></td>
 	    <td>Mesa 8 <input class="radi" type="radio" name="mesa" value="mesa8"></td></tr>
 	    <tr><td colspan="4">
-	   	<input type="submit" class="w3-btn w3-right w3-round-large w3-white w3-border w3-border-black" name="btn" value="Ingresar">
+	   	
 	  	</td></tr>
 	  	</table>
+	  	<button type="submit" name="ingresa" class="btn btn-success">Aceptar</button>
+		<button type="button" class="btn btn-danger pull-right" data-dismiss="modal" aria-hidden="true">Cancelar</button>
 	  </form>
 	      
-		<form method="post" action="pages/backend/act_caracterizacion.php">
-		<input type="hidden" id="bookId" name="borrar">
-		<button type="submit" name="id" class="btn btn-success">Aceptar</button>
-		<button type="button" class="btn btn-danger pull-right" data-dismiss="modal" aria-hidden="true">Cancelar</button>
-		</form>
+
 	
 		</div>							
 		 </div>

@@ -19,6 +19,7 @@ body
 	
 	background-image: url("http://www.fresccogranada.es/esp/wp-content/uploads/2014/12/fondo-web.jpg");
 	background-size: 100%;
+	background-attachment: fixed;
 }
 
 #titulo

@@ -11,7 +11,6 @@
 <link rel="stylesheet" href="../css/opciones.css">
 </head>
 
-
 <?php
 	
 	session_start();

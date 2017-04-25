@@ -16,7 +16,9 @@
 <style>
 body
 {
-	background-image: url("http://fondosmovil.net/images/img6/fondos-vintage-comida-para-bajar-al-celular-10.jpg");
+	
+	background-image: url("http://www.fresccogranada.es/esp/wp-content/uploads/2014/12/fondo-web.jpg");
+	background-size: 100%;
 }
 
 #titulo
@@ -31,12 +33,19 @@ body
 
 h3
 {
-	color: black
+	color: black;
+	font-family: algerian;
 }
-div
+div, input
 {
 	padding: 2px;
-}	
+	
+}
+
+.box
+{
+	border-radius: 15px;
+}
 </style>
 <body>
 
@@ -47,16 +56,17 @@ div
 	<br><br><br>
 		
 			
-			<div class="box-body">
+			<div  class="box-body">
 			
-			<div class="col-md-4">
-		     <div class="form-group">
+			<div  class="col-md-4">
+		     <div  class="form-group">
 			  <div class="box box-info">
-				<div class="pull-left w3-panel  w3-leftbar w3-border-cyan"> <h4>Nombre</h4></div><br><br><br><br>
+				<div class="pull-left w3-panel  w3-border-cyan"> <h4>Nombre</h4></div><br><br><br><br>
 				<p> acá Vene la descripción de las Sopasacá Vene la descripción de las Sopas acá Vene la descripción de las Sopas
 					acá Vene la descripción de las Sopas acá Vene la descripción de las Sopas acá Vene la descripción de las Sopas
 				</p>
 				<div class="pull-right  w3-border-cyan w3-border-bottom"> <h4>$ 8.000</h4></div><br><br>
+				<div class="pull-left"> </div>
 				<input type="checkbox" value="1">
 				</div>							
 		 	  </div>
@@ -70,10 +80,13 @@ div
 					acá Vene la descripción de las Sopas acá Vene la descripción de las Sopas acá Vene la descripción de las Sopas
 				</p>
 				<div class="pull-right  w3-border-cyan w3-border-bottom"> <h4>$ 11.500</h4></div><br><br>
-				<input type="checkbox" value="1">				
+				<div class="pull-left"> </div>
+				<input type="checkbox" value="1">
 				</div>							
 		 	  </div>
 		     </div>
+		     
+		     
 		      <div class="col-md-4">
 		     <div class="form-group">
 			  <div class="box box-info">
@@ -82,6 +95,7 @@ div
 					acá Vene la descripción de las Sopas acá Vene la descripción de las Sopas acá Vene la descripción de las Sopas
 				</p>
 				<div class="pull-right  w3-border-cyan w3-border-bottom"> <h4>$ 8.000</h4></div><br><br>
+				<div class="pull-left"> </div>
 				<input type="checkbox" value="1">				
 				</div>							
 		 	  </div>
@@ -95,6 +109,7 @@ div
 					acá Vene la descripción de las Sopas acá Vene la descripción de las Sopas acá Vene la descripción de las Sopas
 				</p>
 				<div class="pull-right  w3-border-cyan w3-border-bottom"> <h4>$ 15.000</h4></div><br><br>
+				<div class="pull-left"> </div>
 				<input type="checkbox" value="1">
 				</div>							
 		 	  </div>
@@ -108,6 +123,7 @@ div
 					acá Vene la descripción de las Sopas acá Vene la descripción de las Sopas acá Vene la descripción de las Sopas
 				</p>
 				<div class="pull-right  w3-border-cyan w3-border-bottom"> <h4>$ 12.000</h4></div><br><br>
+				<div class="pull-left"> </div>
 				<input type="checkbox" value="1">				
 				</div>							
 		 	  </div>
@@ -120,6 +136,7 @@ div
 					acá Vene la descripción de las Sopas acá Vene la descripción de las Sopas acá Vene la descripción de las Sopas
 				</p>
 				<div class="pull-right  w3-border-cyan w3-border-bottom"> <h4>$ 23.500</h4></div><br><br>
+				<div class="pull-left"> </div>
 				<input type="checkbox" value="1">				
 				</div>							
 		 	  </div>

@@ -33,7 +33,7 @@
 <button class="w3-btn w3-white w3-border w3-small w3-ripple w3-border-pink w3-round-xlarge">POSTRES</button>
 <button class="w3-btn w3-white w3-border w3-small w3-ripple w3-border-green w3-round-xlarge">ENSALADAS</button>
 <button class="w3-btn w3-white w3-border w3-small w3-ripple w3-border-aqua w3-round-xlarge">BEBIDAS</button>
-<button class="w3-btn w3-white w3-border w3-small w3-ripple w3-border-aqua w3-round-xlarge"  onClick="location.href='sopas.html'">SOPAS</button><br>
+<button class="w3-btn w3-white w3-border w3-small w3-ripple w3-border-aqua w3-round-xlarge"  onClick="location.href='sopas.php'">SOPAS</button><br>
 <button on class="w3-btn w3-white w3-border w3-small w3-ripple w3-border-teal w3-round-xlarge">PAGAR</button>
 </div>
 

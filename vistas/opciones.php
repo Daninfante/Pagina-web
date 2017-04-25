@@ -8,82 +8,9 @@
 <!-- 
 <link rel="stylesheet" href="Estilo.css"/> -->
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="../css/opciones.css">
 </head>
-<style>
 
-	button
-	{
-		margin: 15px 10px;
-		width: 45%;
-		/*box-shadow: inset 10px -1px 7px 1px rgba(161,51,51,0.75);*/
-		/*word-wrap: break-word;*/
-	}
-
-	@media (max-width: 700px)
-	{
-		button
-		{
-			width: 65%;
-
-		}
-
-		#usr
-		{
-			width: 65%;
-		}		
-	}
-
-	div
-	{
-		background-color: white;
-		/*height: 350px;*/
-		width: 50%;
-		margin: 10% 25%;
-		border-radius: 1px 65px 1px 65px;
-		box-shadow: inset 23px -1px 40px 7px rgba(118,33,33,0.75);
-	}
-
-	html
-	{
-		/*background: rgba(99, 66, 66, 1);*/
-		background-image: url("http://torrecatalunya.expohotels.com/wp-content/uploads/2014/12/Visual-Eje-__H81.jpg");
-	}
-
-	body
-	{
-		text-align: center;
-	}
-
-	#usr
-	{
-		font-family: monotype corsiva, cursive;
-		position: relative;
-		size: 25px;
-		text-transform: uppercase;
-		border-radius: 15px;
-		opacity: .2;
-
-	}
- 
-	#usr
-	{ 
-    	background-image: black;
-    	animation: usr 2s infinite;
-	}
-
-/*@keyframes usr {
-    50% {
-    	opacity: 0.1;
-    	}
-}*/
-
-#usr:hover
-{
-	margin: 1px solid red;
-	opacity: .7;
-}
-
-</style>
 
 <?php
 	
@@ -101,7 +28,7 @@
 <div>
 <br>
 <form action="../backend/ingreso.php" method="post">
-<input type="submit" name="cerrar" id='usr' value="<?php echo $_SESSION['cliente'] ?>" class='w3-btn w3-ripple'>
+<input type="submit" title="Cerrar sesión" name="cerrar" id='usr' value="<?php echo $_SESSION['cliente'] ?>" class='w3-btn w3-ripple'>
 </form>
 <br><br>
 

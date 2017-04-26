@@ -62,26 +62,27 @@ $query = $oe->conexion->query("SELECT * FROM sopas");
 			</div>
 	<br><br><br>
 		
-			
-			<div  class="box-body">
-			
+<form action=" " method="post">
+		<div  class="box-body">
 			<?php while($row = $query->fetch_assoc()) { ?>
-			
 			<div  class="col-md-4">
 		     <div  class="form-group">
 			  <div class="box box-info">
 				<div class="pull-left w3-panel w3-bottombar w3-border-cyan"> <h4><?php echo $row['nombre'];?></h4></div><br><br><br><br>
-				<p> <?php echo $row ['descripcion'];?>
+				<p> <?php echo $row['descripcion'];?>
 				</p>
-				<div class="pull-right  w3-border-cyan w3-border-bottom"> <h4>$ <?php echo$row['precio'];?></h4></div><br><br>
+				<div class="pull-right  w3-border-cyan has-success"> 
+					<h4><input readonly class="w3-input " value="$ <?php echo$row['precio'];?>"type="text" style="width:85px"></h4>
+				</div><br><br>
 				<div class="pull-left"> </div>
-				<input type="checkbox" value="1">
+				<input type="checkbox" value="">
 				</div>							
 		 	  </div>
 		     </div>
 		     <?php }?>
 		</div>
-  <button type="button" class="btn btn-info btn-small pull-center">Enviar Pedido</button>
-  
+  <button type="submit" class="btn btn-info btn-small pull-center">Enviar Pedido</button>
+ </form>
+ 
 </body>
 </html>

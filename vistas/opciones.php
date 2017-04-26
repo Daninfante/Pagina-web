@@ -23,7 +23,7 @@
 
 <div>
 <br>
-<form action="../backend/ingreso.php" method="post">
+<form action="../backend/b_ingreso.php" method="post">
 <input type="submit" title="Cerrar sesión" name="cerrar" id='usr' value="<?php echo $_SESSION['cliente'] ?>" class='w3-btn w3-ripple'>
 </form>
 <br><br>

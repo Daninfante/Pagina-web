@@ -52,19 +52,20 @@ $query = $oe->conexion->query("SELECT * FROM sopas");
 </div>
 <br><br><br>
 		
-<form action="#" method="post">
-		<div  class="box-body">
+<form action="../backend/b_sopas.php" method="post">
+		<div  class="box-body ">
 			<?php while($row = $query->fetch_assoc()) { ?>
 			<div  class="col-md-4 ">
 		     <div  class="form-group ">
 			  <div class="box box-info w3-round-xlarge w3-padding-16">
-				<div class="pull-left w3-panel w3-bottombar w3-border-cyan"> <h4><?php echo $row['nombre'];?></h4></div><br><br><br><br>
-				<p class="w3-margin-left"> <?php echo $row['descripcion'];?>
+				<div  class="w3-container w3-teal "> <h4><?php echo $row['nombre'];?></h4></div><br><br><br><br>
+				<p class="w3-margin-left "> <?php echo $row['descripcion'];?>
 				</p>
-				<div class="pull-right  w3-border-cyan has-success"> 
-					<h4><input readonly class="w3-input " value="$ <?php echo$row['precio'];?>"type="text" style="width:85px"></h4>
+				<div class="pull-right  w3-border-cyan w3-border-bottom w3-panel"> 
+					<h4>$<?php echo $row['precio'];?></h4>
 				</div><br><br>
-				<input type="checkbox" class="w3-margin-left" value="1">
+				<input name="precio[]" type="checkbox" class="w3-margin-left" value="<?php echo $row['precio'];?>"><br>
+				<input name="nombre[]" type="checkbox" class="w3-margin-left" value="<?php echo $row['nombre'];?>">
 				</div>							
 		 	  </div>
 		     </div>

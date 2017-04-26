@@ -13,6 +13,16 @@
 <link href="header.html" rel="import" />
 </head>
 
+<script type="text/javascript">
+$(document).ready(function(){
+$('#precios').on('input', function(){
+	var id = $(this).val();
+	 var id = opt.attr('id'); 		
+	 $.get("../backend/b_sopas.php", { param_id: id}
+	 });
+	})
+}); 
+</script>
 <style>
 body
 {
@@ -47,7 +57,7 @@ $query = $oe->conexion->query("SELECT * FROM sopas");
 ?>
 
 <br><br>
-<div id="titulo" class="w3-panel w3-cyan">
+<div id="titulo" class="w3-panel w3-teal">
 	<h3>SOPAS</h3>
 </div>
 <br><br><br>
@@ -64,8 +74,7 @@ $query = $oe->conexion->query("SELECT * FROM sopas");
 				<div class="pull-right  w3-border-cyan w3-border-bottom w3-panel"> 
 					<h4>$<?php echo $row['precio'];?></h4>
 				</div><br><br>
-				<input name="precio[]" type="checkbox" class="w3-margin-left" value="<?php echo $row['precio'];?>"><br>
-				<input name="nombre[]" type="checkbox" class="w3-margin-left" value="<?php echo $row['nombre'];?>">
+				<input id="precios" name="precio[]" type="checkbox" class="w3-margin-left" value="<?php echo $row['precio'];?>"><br>
 				</div>							
 		 	  </div>
 		     </div>

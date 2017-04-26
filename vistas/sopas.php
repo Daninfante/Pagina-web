@@ -47,12 +47,12 @@ $query = $oe->conexion->query("SELECT * FROM sopas");
 ?>
 
 <br><br>
-			<div id="titulo" class="w3-panel w3-cyan">
-				<h3>SOPAS</h3>
-			</div>
-	<br><br><br>
+<div id="titulo" class="w3-panel w3-cyan">
+	<h3>SOPAS</h3>
+</div>
+<br><br><br>
 		
-<form action=" " method="post">
+<form action="#" method="post">
 		<div  class="box-body">
 			<?php while($row = $query->fetch_assoc()) { ?>
 			<div  class="col-md-4 ">
@@ -70,7 +70,8 @@ $query = $oe->conexion->query("SELECT * FROM sopas");
 		     </div>
 		     <?php }?>
 		</div>
-  <button type="submit" class="btn btn-info btn-small pull-center">Enviar Pedido</button>
+  <button type="submit" class="btn btn-success btn-small pull-center" style="width: 130px;">Enviar Pedido</button>
+  <button type="button" class="btn btn-danger btn-small pull-center" onClick="location.href='opciones.php'" style="width: 130px;">Atrás</button>
  </form>
  
 </body>

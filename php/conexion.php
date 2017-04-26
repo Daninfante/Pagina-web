@@ -1,17 +1,15 @@
 <?php
+$db_host = "";
+$db_usuario = "";
+$db_contraseï¿½a = "";
+$db_nombre = "";
 
-	$db_host="";
-	$db_usuario="";
-	$db_contraseña="";
-	$db_nombre="";
+$conexion = mysqli_connect ( $db_host, $db_usuario, $db_contraseï¿½a, $db_nombre );
+if (mysqli_connect_errno ()) {
+	echo "ERROR AL CONECTAR CON LA BASE DE DATOS, POR FAVOR VUELVE A INTENTAR MAS TARDE O CONTACTESE CON EL ADMINISTRADOR";
+	exit ();
+}
 
-	$conexion=mysqli_connect($db_host,$db_usuario,$db_contraseña,$db_nombre);
-	if (mysqli_connect_errno()) 
-	{
-		echo "ERROR AL CONECTAR CON LA BASE DE DATOS, POR FAVOR VUELVE A INTENTAR MAS TARDE O CONTACTESE CON EL ADMINISTRADOR";
-		exit();	
-	}
-
-	mysqli_set_charset($conexion,"utf8");
+mysqli_set_charset ( $conexion, "utf8" );
 
 ?>

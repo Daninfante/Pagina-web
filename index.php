@@ -1,3 +1,3 @@
-<?php  
-header("Location: vistas/cuerpo.html");
+<?php
+header ( "Location: vistas/cuerpo.html" );
 ?>

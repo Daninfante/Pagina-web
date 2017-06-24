@@ -18,11 +18,8 @@ body
 include '../modelo/conexion.php';
 $oe = new conex();
 $nombres = array("Sopas", "Secos", "Bebidas");
-$secos = $oe->conexion->query("SELECT * FROM temp_secos");
-$sopas = $oe->conexion->query("SELECT * FROM temp_sopas");
-$bebidas = $oe->conexion->query("SELECT * FROM temp_bebidas");
 $todo = $oe->conexion->query("SELECT * FROM temp_todo where mesa='mesa 1'");
-$total= $oe->conexion->query("select sum(p_beb) as total from Rest.temp_todo");
+$total= $oe->conexion->query("select sum(p_beb) as total from temp_todo");
 $suma= $total->fetch_row();
 ?>
 
@@ -73,7 +70,8 @@ $suma= $total->fetch_row();
 				
 		<tr>
 			<td >			
-				<button type="submit" class="btn btn-success btn-small pull-center" style="width: 130px;">Confirmar</button>				
+				<button type="submit" class="btn btn-success btn-small pull-center" style="width: 130px;">Confirmar</button><br>
+				<button type="button" class="btn btn-danger btn-small pull-center" onClick="location.href='opciones.php'" style="width: 130px;">Atrás</button>			
 			</td>
 			
 			<td>

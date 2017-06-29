@@ -1,3 +1,4 @@
+
 <?php
 	
 	session_start();
@@ -64,34 +65,47 @@ $query = $oe->conexion->query("SELECT * FROM sopas");
 		
 <form action="../backend/b_sopas.php" method="post">
 		<div class="box-body ">
-			<?php while($row = $query->fetch_assoc()) { ?>
+			<?php $i=0; while($row = $query->fetch_assoc()) {  ?>
 			<div  class="col-md-4 ">
 		     <div  class="form-group ">
 			  <div class="box box-info w3-round-xlarge w3-padding-16">
 				<div  class="w3-container w3-teal "> <h4><?php echo $row['nombre'];?></h4> 
 				<!-- -->
 				 </div><br><br><br><br>
-				<p class="w3-margin-left "> <?php echo $row['descripcion'];?>
-				<p style="text-align: right;">
-				<select name="cant[]">
-				<option></option>
-				<option>1</option>
-				<option>2</option>
-				</select>
-				</p> 
+				<p class="w3-margin-left "> 
+					<?php echo $row['descripcion'];?> 				
 				</p>
+				<input class="form-control" disabled id="cant<?php echo $i;?>" name="cant[]" style="width: 50%;">
 				<div class="pull-right  w3-border-cyan w3-border-bottom w3-panel"> 
 					<h4>$<?php echo $row['precio'];?></h4>
 				</div><br><br>
-				<input id="id" name="id[]" type="checkbox" class="w3-margin-left" value="<?php echo $row['id_sopa'];?>"><br>
+				<input id="id<?php echo $i;?>" name="id[]" type="checkbox" required onclick="habilitar('<?php echo"cant$i";?>')" class="w3-margin-left" value="<?php echo $row['id_sopa'];?>"><br>
 				</div>							
 		 	  </div>
 		     </div>
-		     <?php }?>
+		     <?php $i++;}?>
 		</div>
   <button type="submit" class="btn btn-success btn-small pull-center" style="width: 130px;">Enviar Pedido</button>
   <button type="button" class="btn btn-danger btn-small pull-center" onClick="location.href='opciones.php'" style="width: 130px;">Atrás</button>
  </form>
+ 
+ <script>
+function habilitar(algo)
+{
+	
+    var id=algo;	
+   	var x = document.getElementById(id);
+	   
+       if(x.disabled==false)
+       	{
+       		$('#'+id).attr('disabled','disabled');
+       	}
+       else
+       	{
+    	   $('#'+id).removeAttr("disabled");
+       	}
+}
+</script>
  
 </body>
 </html>
